@@ -19,6 +19,6 @@ int main(void)
 	{
 	putchar(ch);
 	}
-	putchar(10),/* this is the ASCII code for new line*/
+	putchar(10);/* this is the ASCII code for new line*/
 	return (0);
 }
