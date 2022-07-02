@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
-* main -> assign a random number to the variable n each time it is executed and prints out
-* based on a condition
+* main -> assign a random numb to the var n each time it is executed
+* and prints out
+* based on condition
 * Return: something
 */
 int main(void)
