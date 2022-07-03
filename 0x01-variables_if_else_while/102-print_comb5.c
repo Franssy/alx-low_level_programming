@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * mani - Entry point
+ * main - Entry point
  * Description: prints all possible commbinations of 2-digit numbers
  * Return: Always 0 (success)
  */
