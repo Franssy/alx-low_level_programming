@@ -46,18 +46,18 @@ int main(void)
 		printf("%lu", f1);
 
 		tmp = (f1 + f2) % mx;
-		tmp0 = f10 + f20 + (f1 + f2) / mx;
+		tmp = f10 + f20 + (f1 + f2) / mx;
 		f1 = f2;
 		f10 = f20;
 		f2 = tmp;
-		f20 = tmp0;
+		f20 = tmp;
 
 		if (i != 98)
 			printf(", ");
 		else
 			printf("\n");
 
-		i++,
+		i++;
 	}
 	return (0);
 }
