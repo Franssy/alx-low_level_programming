@@ -1,63 +1,45 @@
 #include <stdio.h>
-
 /**
- * numLength - return the lenth of string
- * @num: operand number
- * Return: number of digits
+ * main - prints out first 98
+ * fibonacci suit numbers
+ * Return: return 0
  */
-
-int numLength(int num)
-{
-	int length = 0;
-
-	if (num)
-	{
-		return (1);
-	}
-
-	while (num)
-	{
-		num = num / 10;
-		length += 1;
-	}
-
-	return (length);
-}
-/**
- * main - prints the first98 fibonaci sequences
- * Return: 0 success
- */
-
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f10 = 0, f20 = 0, tmp = 0;
-	short int i = 1, initia10s;
+	int inc;
+	unsigned long n1 = 0, n2 = 1, n3;
+	unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+	unsigned long h1, h2;
 
-	while (i <= 98)
+	for (inc = 0; inc < 92; inc++)
 	{
-		if (f10 > 0)
-			printf("%lu", f10);
-		initia10s = numLength(mx) - 1 - numLength(f1);
-		while (f10 > 0 && initia10s > 0)
-		{
-			printf("%i", 0);
-			initia10s--;
-		}
-		printf("%lu", f1);
-
-		tmp = (f1 + f2) % mx;
-		tmp = f10 + f20 + (f1 + f2) / mx;
-		f1 = f2;
-		f10 = f20;
-		f2 = tmp;
-		f20 = tmp;
-
-		if (i != 98)
-			printf(", ");
-		else
-			printf("\n");
-
-		i++;
+		n3 = n1 + n2;
+		printf("%lu, ", n3);
+		n1 = n2;
+		n2 = n3;
 	}
+	n1_h1 = n1 / 10000000000;
+	n2_h1 = n2 / 10000000000;
+	n1_h2 = n1 % 10000000000;
+	n2_h2 = n2 % 10000000000;
+	for (inc = 93; inc < 99; inc++)
+	{
+		h1 = n1_h1 + n2_h1;
+		h2 = n1_h2 + n2_h2;
+		if ((n1_h2 + n2_h2) > 9999999999)
+		{
+			h1 += 1;
+			h2 %= 10000000000;
+		}
+		printf("%lu%lu", h1, h2);
+		if (inc != 98)
+			printf(", ");
+
+		n1_h1 = n2_h1;
+		n1_h2 = n2_h2;
+		n2_h1 = h1;
+		n2_h2 = h2;
+	}
+	printf("\n");
 	return (0);
 }
