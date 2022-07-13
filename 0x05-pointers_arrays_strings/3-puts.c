@@ -2,14 +2,14 @@
 
 /**
  * _puts - prints a string and a new line
- * @str: pointer to a string to print
+ * @str: string to print
  *
- * Return: 0
+ * Return: number of characters printed
  */
 
 void _puts(char *str)
 {
-while (*str)	{
+while (*str)
 _putchar(*str++);
 
 _putchar('\n');
