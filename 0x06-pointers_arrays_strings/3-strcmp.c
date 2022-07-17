@@ -1,33 +1,23 @@
 #include "main.h"
-/**
- * print_rev - prints a string in reverse
- * @s: string to print
- */
-
-void print_rev(char *s)
-{
-int len = 0, index = 0;
-
-len = _strlen(s);
-
-for (index = len - 1; index >= 0; index--)
-_putchar(s[index]);
-
-_putchar('\n');
-}
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: returns lenght;
+ * _strcmp - Compares pointers to two strings.
+ * @s1: A pointer to the first string to be compared.
+ * @s2: A pointer to the second string to be compared.
+ *
+ * Return: If str1 < str2, the negative difference of
+ * the first unmatched characters.
+ * If s1 == s2, 0.
+ * If s1 > s2, the positive difference of
+ * the first unmatched characters.
  */
-int _strlen(char *s)
+int _strcmp(char *s1, char *s2)
 {
-int count, inc;
+	while ((*s1 && *s2) && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
 
-inc = 0;
-for (count = 0; s[count] != '\0'; count++)
-inc++;
-
-return (inc);
+	return (*s1 - *s2);
 }
