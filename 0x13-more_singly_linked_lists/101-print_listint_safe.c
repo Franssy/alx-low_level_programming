@@ -23,10 +23,12 @@ return (0);
 tortoise = head->next;
 hare = (head->next)->next;
 
-while (hare)									{
+while (hare)
+{
 if (tortoise == hare)
 
-tortoise = head;								while (tortoise != hare)
+tortoise = head;
+while (tortoise != hare)
 {
 nodes++;
 tortoise = tortoise->next;
